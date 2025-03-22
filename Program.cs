@@ -35,6 +35,10 @@ namespace Calculator
                     result = RunSubtract(operand1, operand2);
                     break;
 
+                case Operator.Divide:
+                    result = RunDivide(operand1, operand2);
+                    break;
+
                 default:
                     Console.WriteLine();
                     Console.WriteLine($"ERROR: Operator '{@operator}' is not yet implemented.");
@@ -55,6 +59,12 @@ namespace Calculator
         private static decimal RunSubtract(decimal operand1, decimal operand2)
         {
             return operand1 - operand2;
+        }
+
+        [Pure]
+        private static decimal RunDivide(decimal operand1, decimal operand2)
+        {
+            return (operand2 == 0) ? return 100000 : return operand1/operand2;
         }
 
         [Pure]
