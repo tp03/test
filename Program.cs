@@ -12,6 +12,7 @@ namespace Calculator
             Subtract,
             Multiply,
             Divide,
+            Power,
         }
 
         private static void Main()
@@ -40,6 +41,10 @@ namespace Calculator
                     
                 case Operator.Multiply:
                     result = RunMultiply(operand1, operand2);
+                    break;
+                
+                case Operator.Power:
+                    result = RunPower(operand1, operand2);
                     break;
 
                 default:
@@ -74,6 +79,12 @@ namespace Calculator
         private static decimal RunMultiply(decimal operand1, decimal operand2)
         {
             return operand1*operand2;
+        }
+
+        [Pure]
+        private static decimal RunPower(decimal operand1, decimal operand2)
+        {
+            return Pow(operand1, operand2);
         }
 
         [Pure]
