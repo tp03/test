@@ -37,6 +37,9 @@ namespace Calculator
 
                 case Operator.Divide:
                     result = RunDivide(operand1, operand2);
+                    
+                case Operator.Multiply:
+                    result = RunMultiply(operand1, operand2);
                     break;
 
                 default:
@@ -65,6 +68,12 @@ namespace Calculator
         private static decimal RunDivide(decimal operand1, decimal operand2)
         {
             return (operand2 == 0) ? return 100000 : return operand1/operand2;
+        }
+
+        [Pure]
+        private static decimal RunMultiply(decimal operand1, decimal operand2)
+        {
+            return operand1*operand2;
         }
 
         [Pure]
