@@ -38,6 +38,7 @@ namespace Calculator
 
                 case Operator.Divide:
                     result = RunDivide(operand1, operand2);
+                    break;
                     
                 case Operator.Multiply:
                     result = RunMultiply(operand1, operand2);
